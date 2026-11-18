@@ -1,22 +1,18 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-import  "forge-std/Test.sol";
-import  "../src/HelloWorld.sol";
+import "forge-std/Test.sol";
+import "../src/HelloWorld.sol";
 
 contract HelloWorldTest is Test {
     HelloWorld public helloWorld;
 
     function setUp() public {
         helloWorld = new HelloWorld();
-      
     }
 
-    function testGreet() view public {
+    function testGreet() public view {
         helloWorld.greet();
-        assertEq(helloWorld.greet(),
-        "Hello World!");
+        assertEq(helloWorld.greet(), "Hello World!");
     }
-
- 
 }

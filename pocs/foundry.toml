@@ -1,0 +1,5 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["../lib"]  # 直接借用外面大项目的 lib 库（或者把 forge-std 链接过去）
+evm_version = "shanghai" # 如果想跑通自毁，这里可以安全地设为 shanghai，不影响外面
